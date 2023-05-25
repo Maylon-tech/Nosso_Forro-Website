@@ -14,30 +14,62 @@
     background-position: top center;
     background-size: cover;
 }
+
 .container {
     max-width: 1360px;
     min-width: 400px;
     margin: 0 auto;
-    height: 100%;
 }
 
 .header {
-    background-color: rgba(0,0,0,0.5);
+    background-color: #eee;
     position: fixed;
-    height: 9vh;
+    height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
+.header .logo { 
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
 
-.header .logo h1 {
-    font-size: 1.6em;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+.header .logo a {
+    width: 30%;
+    height: 100%;
+    display: block;
+    padding: .5rem 0;
+}
+.header .logo span::before {
+    content: '*';
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
 }
 .header .logo span {
-    border-bottom: 2px solid yellow;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
+    font-weight: bolder;
+    font-style: italic;
+    padding-left: 1rem;
+}
+.header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.header .navbar {
+    padding: .5rem;
 }
 .header .navbar ul {
     display: flex;
@@ -69,9 +101,10 @@
 }
 .header .navbar a {
     text-decoration: none;
-    font-size: 1.2em;
-    color: #fff;
-    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #222;
+  
     font-family: Arial, Helvetica, sans-serif;
     transition: all .5s;
 }
@@ -79,39 +112,57 @@
 /* Content TXT */
 
 .content {
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, 0.7)), url('../assets/heroBG.webp');
+    background-size: cover;
+    background-position: center;
     padding: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 90%;
+    height: 100vh;
 }
 .container-box {
-    width: 800px;
-    height: 100%;
     padding: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
-.container-box span {
-    color: rgb(245, 49, 49);
-    font-size: 1.4em;
-    font-family: Arial, Helvetica, sans-serif;
+
+.container-box::before {
+    content: '*';
+    position: absolute;
+    top: 95px;
+    left: 25px;
+    transform: translate(-50%, -50%);
+    font-size: 5rem; 
+    color: #fff;
 }
+
+.container-box::after {
+    content: '*';
+    position: absolute;
+    top: 105px;
+    right: -10px;
+    transform: translate(-50%, -50%);
+    font-size: 5rem; 
+    color: #fff;
+}
+
 .container-box h1 {
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    font-size:4em;
+    font-size: 4rem;
     font-weight: 500;
     letter-spacing: 1px;
 }
 .container-box h3 {
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 500;
     letter-spacing: 2px;
-    margin-bottom: 30px;
+    margin: 1.5rem 0;
 }
 .container-box a{
     padding: 25px 32px;
@@ -149,87 +200,75 @@
 
 /* professors classes */
 
-.prof-classes {
+.about {
     width: 100%;
-    height: 100vh;
-    background-color: rgba(92, 72, 72, 0.699);
-    
+    padding-top: 2rem;
+    background-color: #eee;
 }
 
-.container-content {
-    max-width: 1360px;
-    min-width: 400px;
+main {
+    max-width: 1260px;
     margin: 0 auto;
-    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px;
-    border-radius: 2px solid red;
-    background-color: #222;
+    justify-content: center;
+    gap: 1rem;
 }
-.container-content .image-prof {
+
+.about-image {
+    width: 35%;
+    height: 600px;
+    padding: 2.7rem;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.about-image img {
+    width: 100%;
     height: 100%;
-    width: 700px;
-    height: 500px;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 70px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-right: 4px solid red; 
-    border-left: 4px solid yellow;
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(../img/Nosso-Forro-Vermelha_team.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    position: relative;
+    object-fit: contain;
 }
-.container-content .image-prof span {
-    position: absolute;
-    bottom: 70px;
-    left: 200px;
-    color: yellow;
-    letter-spacing: 1px;
-    font-size: 1.2em;
+
+.info-content {
+    width: 45%;
+    padding-top: 4rem;
+    margin-top: 2rem;
+}
+.info-content h1 {
+    margin-bottom: 1rem;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
 }
-.container-content .image-prof::before {
-    content: '';
-    position: absolute;
-    background-image: url(../img/logo.jpg);
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    left: 10px;
-    top: 10px;
+.info-content span {
     width: 80px;
-    height: 80px;
-    border-radius: 100px;
-} 
-.container-content .image-prof::after {
-    content: '';
-    position: absolute;
-} 
-
-.content-text-classes {
-    border: 2px solid white;
-    height: 80vh;
+    height: 3px;
+    background-color: #444;
+    margin: 1rem 0;
+    display: block;
 }
-
-.text-animated {
-    border: 2px solid green;
-    padding: 25px 30px;
-}
-.text-animated h1 {
-    color: #fff;
+.info-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-family: Arial, Helvetica, sans-serif;
+    text-indent: 40px;
+    color: #333;
 }
 
 
-.content-location {
-    border: 2px solid black;
-    padding: 40px;
-    width: 430px;
-    height: 570px;
-    margin-right: 50px;
+.classes {
+    height: 100vh;
+    background-color: lightgray;
+    display: flex;
+}
+
+.info-class {
+    border: 2px solid orange;
+
+    width: 40%;
+}
+
+.class-image {
+    border: 2px solid blue;
+ 
+    width: 35%;
 }
