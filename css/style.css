@@ -320,21 +320,16 @@ main {
 
 .footer {
     height: 45vh;
-    border: 2px solid orange;
 }
-
 .footer .info-footer {
-    max-width: 550px;
+    max-width: 300px;
     margin: 0 auto;
-    border: 2px solid orange;
     padding: 4px;
-
     height: 80%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-
 .footer .info-footer > div {
     margin: .5rem 0;
 }
@@ -342,4 +337,32 @@ main {
     color: #222;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
+}
+.footer .info-footer i {
+    margin-right: 1.2rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    background-color: #eee;
+}
+.footer-bottom span {
+    margin-right: 1rem;
+    color: #223;
+}
+.footer-bottom a {
+    text-decoration: none;
+    color: #333;
+    transition: .3s ease;
+}
+.footer-bottom a:hover {
+    color: crimson;
+}
+.footer-bottom a:active {
+    border-bottom: 1px solid orangered;
 }
